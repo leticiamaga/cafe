@@ -3,44 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help</title>
+    <title>Help - CatCoffee</title>
+    <style>
+        /* Importando a fonte personalizada */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('https://media.canva.com/1/font-render/2/UGxheWxpc3QgU2NyaXB0_16_224_24_C_B_A_1.4_00000000_0e1318ff_A/aWZzOi8vL2ZlZTdkY2Y3LTRlMDEtNDQ2Ni05OTEzLTQ2MzdjYTVlMjk3OA?osig=AAAAAAAAAAAAAAAAAAAAAOoqPrGZWftR_Mg-DvqFRMiOHgp3qUGqqxCngZ8YCLWn&exp=1733682915&csig=AAAAAAAAAAAAAAAAAAAAAMdR92qb8uEiEqykMevz7H58e5IzU_hvhFpm75JWy9DS') format('truetype');
+        }
+
+        body {
+            background-color: #f6f3eb;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cabeçalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6b4423;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .cabeçalho__logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cabeçalho__logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .cabeçalho__titulo {
+            font-size: 2.5em;
+            color: #FFF;
+            margin: 0;
+            font-family: cursive;
+        }
+
+        .cabeçalho_menu {
+            margin-left: auto;
+        }
+
+        .opções {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opções__item {
+            display: inline;
+        }
+
+        .opções__link {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .opções__link:hover {
+            color: #cb9d73;
+        }
+
+        .content {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content h2 {
+            font-family: 'CustomFont', cursive;
+            font-size: 3em;
+            color: #6b4423;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .content p::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 160px;
+            background-color: #cb9d73;
+            margin-right: 20px;
+        }
+
+        .content img {
+            margin-top: 20px;
+            width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .content h2 {
+                font-size: 2em;
+            }
+            .content p::before {
+                height: 120px;
+            }
+            .opções {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
     <!-- Cabeçalho -->
     <header class="cabeçalho">
         <div class="cabeçalho__logo">
-           
-            <img src="logo.png.png" alt="Logo Catcofee" class="container__imagem" />
-            <h1 class="container__titulo">
-                <b class="Gatofeeterialogo">Catcofee</b>
-            </h1>
+            <img src="logo.png.png" alt="Logo CatCoffee" />
+            <h1 class="cabeçalho__titulo"><b>CatCoffee</b></h1>
         </div>
-</head>
-</head>
-<style>
-    body {
-        background-color: #f6f3eb;
-        color: #FFF; /* Ajusta a cor do texto para contraste com o fundo */
-        font-family: Arial, sans-serif;
-    }
-    .menu-item {
-        position: relative;
-        margin: 20px;
-        display: inline-block;
-        width: 250px;
-    }
-    .menu-item img {
-        width: 200px;
-        height: auto;
-    }
-    .menu-item h2 {
-        margin-top: 10px;
-        font-size: 1.5em;
-    }
-    .menu-item ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-</style>
-<body>
-    
+        <nav class="cabeçalho_menu">
+            <ul class="opções">
+                <li class="opções__item"><a href="cardapio.html" class="opções__link">Cardápio</a></li>
+                <li class="opções__item"><a href="help.html" class="opções__link">Help</a></li>
+                <li class="opções__item"><a href="login.html" class="opções__link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página de Ajuda -->
+    <div class="content">
+        <h2>Precisa de Ajuda?</h2>
+        <p>Para realizar seu pedido, faça o login com as informações necessárias. Caso ainda tenha dúvidas, entre em contato com nossa ouvidoria.</p>
+        <img src="gatohelp.png" alt="Imagem de Cappuccino">
+    </div>
 </body>
 </html>

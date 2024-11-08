@@ -6,112 +6,201 @@
     <title>Cardápio do CatCoffee</title>
     <style>
         body {
-            background-color: #482E1D; 
-            column-rule-color:#b29275;
-            color: #FFF; /* Ajusta a cor do texto para contraste com o fundo */
+            background-color: #482E1D;
+            color: #FFF;
             font-family: Arial, sans-serif;
+            padding: 20px;
         }
-        .menu-item {
-            position: relative;
-            margin: 20px;
-            display: inline-block;
-            width: 250px;
+
+        /* Estilos do Cabeçalho */
+        .cabeçalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6b4423;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
-        .menu-item img {
-            width: 200px;
+
+        .cabeçalho__logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cabeçalho__logo img {
+            width: 50px;
             height: auto;
         }
-        .menu-item h2 {
-            margin-top: 10px;
-            font-size: 1.5em;
+
+        .cabeçalho__titulo {
+            font-size: 1.8em;
+            margin: 0;
         }
+
+        .cabeçalho_menu ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opções__link {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .opções__link:hover {
+            color: #b29275;
+        }
+
+        /* Estilos do Menu */
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .menu-item {
+            background-color: #6b4423;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-item h2 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
         .menu-item ul {
             list-style-type: none;
             padding-left: 0;
+            padding-bottom: 15px;
+        }
+
+        .menu-item ul li {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header class="cabeçalho">
+        <div class="cabeçalho__logo">
+            <img src="logo.png.png" alt="Logo CatCoffee" />
+            <h1 class="cabeçalho__titulo"><b>CatCoffee</b></h1>
+        </div>
+        <nav class="cabeçalho_menu">
+            <ul class="opções">
+                <li class="opções__item"><a href="cardapio.html" class="opções__link">Cardápio</a></li>
+                <li class="opções__item"><a href="help.html" class="opções__link">Help</a></li>
+                <li class="opções__item"><a href="#" class="opções__link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="menu-item">
-        <img src="capputchino.png.jpeg" alt="Cappuccino">
-        <h2>Cappuccino</h2>
-        <ul>
-            <li>Tradicional</li>
-            <li>Chocolate ao leite</li>
-            <li>Chocolate branco</li>
-        </ul>
-    </div>
+    <!-- Menu de Itens -->
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="capputchino.png.jpeg" alt="Imagem de Cappuccino">
+            <h2>Cappuccino</h2>
+            <ul>
+                <li>Tradicional</li>
+                <li>Chocolate ao leite</li>
+                <li>Chocolate branco</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="expresso.png.jpeg" alt="Expresso">
-        <h2>Expresso</h2>
-        <ul>
-            <li>Tradicional</li>
-            <li>Chocolate ao leite</li>
-            <li>Chocolate branco</li>
-            <li>Meio amargo</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="expresso.png.jpeg" alt="Imagem de Expresso">
+            <h2>Expresso</h2>
+            <ul>
+                <li>Tradicional</li>
+                <li>Chocolate ao leite</li>
+                <li>Chocolate branco</li>
+                <li>Meio amargo</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="americano.png.jpeg" alt="Americano">
-        <h2>Americano</h2>
-        <ul>
-            <li>Tradicional</li>
-            <li>Chocolate ao leite</li>
-            <li>Chocolate branco</li>
-            <li>Meio amargo</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="americano.png.jpeg" alt="Imagem de Americano">
+            <h2>Americano</h2>
+            <ul>
+                <li>Tradicional</li>
+                <li>Chocolate ao leite</li>
+                <li>Chocolate branco</li>
+                <li>Meio amargo</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="tortas.png.jpeg" alt="Tortas">
-        <h2>Tortas</h2>
-        <ul>
-            <li>Morango</li>
-            <li>Chocolate</li>
-            <li>Cookie / Brigadeiro</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="tortas.png.jpeg" alt="Imagem de Tortas">
+            <h2>Tortas</h2>
+            <ul>
+                <li>Morango</li>
+                <li>Chocolate</li>
+                <li>Cookie / Brigadeiro</li>
+                <li>R$ 6,50</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="cakes.png.jpeg" alt="Cakes">
-        <h2>Cakes</h2>
-        <ul>
-            <li>Morango / Chocolate Branco</li>
-            <li>Ninho</li>
-            <li>Coco</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="cakes.png.jpeg" alt="Imagem de Cakes">
+            <h2>Cakes</h2>
+            <ul>
+                <li>Morango / Chocolate Branco</li>
+                <li>Ninho</li>
+                <li>Coco</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="chagelado.png.jpeg" alt="Chá Gelado">
-        <h2>Chá Gelado</h2>
-        <ul>
-            <li>Tradicional (Mate)</li>
-            <li>Frutas Vermelhas</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="chagelado.png.jpeg" alt="Imagem de Chá Gelado">
+            <h2>Chá Gelado</h2>
+            <ul>
+                <li>Tradicional (Mate)</li>
+                <li>Frutas Vermelhas</li>
+                <li>R$ 6,50</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="chatradicional.png.jpeg" alt="Chá Tradicional">
-        <h2>Chá Tradicional</h2>
-        <ul>
-            <li>Chá Mate</li>
-            <li>Hortelã</li>
-            <li>Camomila</li>
-        </ul>
-    </div>
+        <div class="menu-item">
+            <img src="chatradicional.png.jpeg" alt="Imagem de Chá Tradicional">
+            <h2>Chá Tradicional</h2>
+            <ul>
+                <li>Chá Mate</li>
+                <li>Hortelã</li>
+                <li>Camomila</li>
+            </ul>
+        </div>
 
-    <div class="menu-item">
-        <img src="outros.png.jpeg" alt="Outros">
-        <h2>Outros</h2>
-        <ul>
-            <li>Refrigerantes</li>
-            <li>Sucos de Frutas</li>
-            <li>Água</li>
-        </ul>
+        <div class="menu-item">
+            <img src="outros.png.jpeg" alt="Imagem de Outros">
+            <h2>Outros</h2>
+            <ul>
+                <li>Refrigerantes</li>
+                <li>Sucos de Frutas</li>
+                <li>Água</li>
+            </ul>
+        </div>
     </div>
 
 </body>
