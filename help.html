@@ -49,7 +49,7 @@
             font-size: 2.5em;
             color: #FFF;
             margin: 0;
-            font-family: cursive;
+            font-family: 'Pacifico', cursive;
         }
 
         .cabeçalho_menu {
@@ -62,10 +62,6 @@
             gap: 20px;
             padding: 0;
             margin: 0;
-        }
-
-        .opções__item {
-            display: inline;
         }
 
         .opções__link {
@@ -81,9 +77,9 @@
         }
 
         .content {
-            background-color: #FFF;
+            background-color: #f6f3eb;
             border-radius: 10px;
-            padding: 40px;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 800px;
@@ -91,50 +87,39 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .content h2 {
-            font-family: 'CustomFont', cursive;
-            font-size: 3em;
-            color: #6b4423;
-            margin: 0;
-        }
-
-        .content p {
-            font-size: 1.2em;
-            margin-top: 20px;
             position: relative;
-            display: inline-flex;
-            align-items: center;
         }
 
-        .content p::before {
-            content: '';
-            display: block;
-            width: 4px;
-            height: 160px;
-            background-color: #cb9d73;
-            margin-right: 20px;
+        .text-above {
+            font-family: 'CustomFont', cursive;
+            font-size: 2em;
+            color: #6b4423;
+            margin-bottom: 20px;
+        }
+
+        .text-description {
+            font-family: 'CustomFont', cursive;
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #333;
         }
 
         .content img {
-            margin-top: 20px;
-            width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+            width: 100%;
+            max-width: 800px;
+            max-height: 500px;
             height: auto;
+            object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
-            .content h2 {
-                font-size: 2em;
+            .text-above {
+                font-size: 1.5em;
             }
-            .content p::before {
-                height: 120px;
-            }
-            .opções {
-                flex-direction: column;
-                gap: 10px;
+            .text-description {
+                font-size: 1em;
             }
         }
     </style>
@@ -143,23 +128,23 @@
     <!-- Cabeçalho -->
     <header class="cabeçalho">
         <div class="cabeçalho__logo">
-            <img src="logo.png.png" alt="Logo CatCoffee" />
+            <img src="logo.png.png" alt="Logo CatCoffee">
             <h1 class="cabeçalho__titulo"><b>CatCoffee</b></h1>
         </div>
         <nav class="cabeçalho_menu">
             <ul class="opções">
-                <li class="opções__item"><a href="cardapio.html" class="opções__link">Cardápio</a></li>
-                <li class="opções__item"><a href="help.html" class="opções__link">Help</a></li>
-                <li class="opções__item"><a href="login.html" class="opções__link">Login</a></li>
+                <li><a href="cardapio.html" class="opções__link">Cardápio</a></li>
+                <li><a href="help.html" class="opções__link">Help</a></li>
+                <li><a href="login.html" class="opções__link">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Conteúdo da Página de Ajuda -->
     <div class="content">
-        <h2>Precisa de Ajuda?</h2>
-        <p>Para realizar seu pedido, faça o login com as informações necessárias. Caso ainda tenha dúvidas, entre em contato com nossa ouvidoria.</p>
-        <img src="gatohelp.png" alt="Imagem de Cappuccino">
+        <h1 class="text-above">Precisa de Ajuda?</h1>
+        <p class="text-description">Para realizar seu pedido, faça o login com as informações necessárias. Caso ainda tenha dúvidas, entre em contato com nossa ouvidoria.</p>
+        <img src="gato.png.png" alt="Imagem do gatinho">
     </div>
 </body>
 </html>

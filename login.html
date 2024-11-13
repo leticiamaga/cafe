@@ -3,43 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- Cabeçalho -->
-    <header class="cabeçalho">
-        <div class="cabeçalho__logo">
-           
-            <img src="logo.png.png" alt="Logo Catcofee" class="container__imagem" />
-            <h1 class="container__titulo">
-                <b class="Gatofeeterialogo">Catcofee</b>
-            </h1>
-        </div>
+    <title>Login - CatCoffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('fundo.png.jpeg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #FFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #482E1D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cabeçalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(107, 68, 35, 0.8);
+            padding: 15px 30px;
+            border-bottom: 2px solid #cb9d73;
+            width: 100%;
+        }
+
+        .cabeçalho__logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cabeçalho__logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .cabeçalho__titulo {
+            font-size: 2em;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .cabeçalho_menu {
+            margin-left: auto;
+        }
+
+        .opções {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opções__link {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .opções__link:hover {
+            color: #cb9d73;
+        }
+
+        .welcome-text {
+            font-size: 3em;
+            font-family: 'Pacifico', cursive;
+            color: #f7f7f7;
+            text-align: center;
+            margin-top: 120px; /* Distância após o cabeçalho */
+        }
+
+        .login-container {
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin-top: 30px; /* Distância do formulário após o texto */
+        }
+
+        .login-container h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #cb9d73;
+            color: #FFF;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #9f7b4e;
+        }
+
+        .form-group a {
+            color: #cb9d73;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .welcome-text {
+                font-size: 2.5em;
+            }
+        }
+
+    </style>
 </head>
-<style>
-    body {
-        background-color: #482E1D;
-        color: #FFF; /* Ajusta a cor do texto para contraste com o fundo */
-        font-family: Arial, sans-serif;
-    }
-    .menu-item {
-        position: relative;
-        margin: 20px;
-        display: inline-block;
-        width: 250px;
-    }
-    .menu-item img {
-        width: 200px;
-        height: auto;
-    }
-    .menu-item h2 {
-        margin-top: 10px;
-        font-size: 1.5em;
-    }
-    .menu-item ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-</style>
 <body>
-    
+   <!-- Cabeçalho -->
+   <header class="cabeçalho">
+    <div class="cabeçalho__logo">
+        <img src="logo.png.png" alt="Logo CatCoffee">
+        <h1 class="cabeçalho__titulo"><b>CatCoffee</b></h1>
+    </div>
+    <nav class="cabeçalho_menu">
+        <ul class="opções">
+            <li><a href="cardapio.html" class="opções__link">Cardápio</a></li>
+            <li><a href="help.html" class="opções__link">Help</a></li>
+            <li><a href="login.html" class="opções__link">Login</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Texto de boas-vindas abaixo do cabeçalho -->
+    <div class="welcome-text">Bem-vindo ao CatCoffee!</div>
+
+    <!-- Formulário de login -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required placeholder="Digite seu nome de usuário">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Entrar">
+            </div>
+            <div class="form-group">
+                <a href="help.html">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
